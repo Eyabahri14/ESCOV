@@ -43,7 +43,7 @@ exports.register = async (req, res) => {
         console.log(err);
     }
 };
-
+   
 exports.verify = async (req, res) => {
     const user = await User.findOne({ _id: req.params.id });
     if (!user) return res.status(400).send("Email does not exist");

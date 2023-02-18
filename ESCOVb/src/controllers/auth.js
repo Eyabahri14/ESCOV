@@ -37,7 +37,7 @@ exports.register = async (req, res) => {
 
     try {
         await user.save();
-        sendEmail2(req.body.email, `http://34.72.126.111/api/auth/verify/` + user._id); // send the email with the verification link, including the user ID and verification URL
+        sendEmail2(req.body.email, `http://34.122.13.168/api/auth/verify/` + user._id); // send the email with the verification link, including the user ID and verification URL
         res.send({ User: user._id });
     } catch (err) {
         console.log(err);
